@@ -1,0 +1,15 @@
+.top-bar {
+  background-color: #7B995C;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+
+  button {
+    background-color: #9CA561;
+    border: none;
+  }
+  button:hover {
+    background-color: #DBB568;
+  }
+}
+

@@ -1,5 +1,5 @@
 .is-head-left-logo .gh-head-inner {
-    grid-template-columns: 1fr 50% 1fr;
+  grid-template-columns: 1fr 60%;
 }
 
 .gh-head-logo {
@@ -18,4 +18,10 @@
         justify-content: center;
         margin: 0;
     }
+}
+
+/* ------------------------ */
+
+.nav {
+
 }
