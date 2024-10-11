@@ -1,13 +1,5 @@
 current
 
-# Ghost-specific files
-content/data/
-content/files/
-content/logs/
-content/settings/
-content/themes/casper/
-content/apps/
-content/themes/*/assets/
 versions/
 
 # Node.js dependencies
