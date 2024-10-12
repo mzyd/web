@@ -222,3 +222,67 @@ button {
     }
   }
 }
+
+/* ----------- home5  ------------*/
+
+.home5 {
+  width: 100%;
+  background-image: url('{{asset "images/home/bg.jpg"}}');
+  background-image: url("images/home/s1.jpg");
+  background-size: cover;
+  height: 600px;
+  margin-top: 80px;
+}
+
+.footer-bg {
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  &>div {
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .f-left {
+    p {
+      word-wrap: break-word;
+      white-space: normal;
+    }
+  }
+}
+
+.f-middle {
+
+  h3 {
+    color: #e56f1b;
+  }
+  .footer-nav {
+    list-style: none;
+    li {
+      line-height: 2em;
+      color: white!important;
+    }
+    li:hover {
+      color: #e56f1b!important;
+    }
+  }
+}
+
+.f-right {
+  h3 {
+    color: #e56f1b;
+  }
+
+  .contact-box {
+    margin-top: 20px;
+    p {
+      line-height: 2em;
+    }
+  }
+}
+
+.f-bottom {
+  background: #202326;
+  text-align: center;
+  color: white;
+}
