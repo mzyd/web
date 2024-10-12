@@ -8,12 +8,12 @@
 
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
     {{ghost_head}}
+    <link rel="stylesheet" href="{{asset "css/site/header.css"}}">
     <link rel="stylesheet" href="{{asset "css/home.css"}}">
-
 </head>
 
 <body class="{{body_class}}{{{block "body_class"}}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}{{^is "home"}}{{#if @site.cover_image}} is-head-brand{{/if}}{{/is}}">
-<div class="site">
+<div class="site" style="position: relative;">
 
   <div class="top-bar">
     <p>
@@ -21,164 +21,140 @@
     </p>
     <button>Book Now</button>
   </div>
-  <header id="gh-head" class="gh-head gh-outer" style="background-color: rgba(0, 0, 0, 0.5);margin-top: 27px;">
-    <!-- <header id="gh-head" class="gh-head gh-outer"> -->
-    <div class="gh-head-inner" style="grid-template-columns: 1fr 60%;">
-      <div class="gh-head-brand">
-        <div class="gh-head-brand-wrapper">
-          <a class="gh-head-logo" href="{{@site.url}}">
-            {{#if @site.logo}}
-              <img src="{{@site.logo}}" alt="{{@site.title}}">
-            {{else}}
-              {{@site.title}}
-            {{/if}}
-          </a>
-        </div>
-        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
-        <button class="gh-burger"></button>
-      </div>
 
-      <nav class="gh-head-menu">
-        {{navigation}}
-        {{#unless @site.members_enabled}}
-          {{#match @custom.navigation_layout "Stacked"}}
-            <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
-          {{/match}}
-        {{/unless}}
-      </nav>
+  <!-- <header id="gh-head" class="gh-head gh-outer" style="background-color: rgba(0, 0, 0, 0.5);margin-top: 27px;">
+       <div class="gh-head-inner" style="grid-template-columns: 1fr 60%;">
+       <div class="gh-head-brand">
+       <div class="gh-head-brand-wrapper">
+       <a class="gh-head-logo" href="{{@site.url}}">
+       {{#if @site.logo}}
+       <img src="{{@site.logo}}" alt="{{@site.title}}">
+       {{else}}
+       {{@site.title}}
+       {{/if}}
+       </a>
+       </div>
+       <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
+       <button class="gh-burger"></button>
+       </div>
+       <nav class="nav">
+       {{navigation}}
+       </nav>
+       </div>
+       </header> -->
 
-      <!-- <div class="gh-head-actions">
-           {{#unless @site.members_enabled}}
-           {{^match @custom.navigation_layout "Stacked"}}
-           <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
-           {{/match}}
-           {{else}}
-           <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
-           <div class="gh-head-members">
-           {{#unless @member}}
-           {{#unless @site.members_invite_only}}
-           <a class="gh-head-link" href="#/portal/signin" data-portal="signin">Sign in</a>
-           <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Subscribe</a>
-           {{else}}
-           <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signin" data-portal="signin">Sign in</a>
-           {{/unless}}
-           {{else}}
-           <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/account" data-portal="account">Account</a>
-           {{/unless}}
-           </div>
-           {{/unless}}
-           </div> -->
-    </div>
-  </header>
+  {{> header}}
 
-    {{#is "home"}}
-        {{> "cover"}}
-        {{#if @custom.show_featured_posts}}
-            {{> "featured-posts"}}
-        {{/if}}
-    {{/is}}
-
-    <div class="home2">
-      <div class="home2-left">
-        <img alt="bala" src="{{asset 'images/home/spider.jpeg'}}" />
-      </div>
-      <div class="home2-right">
-        <h1>Discover Tanzania’s Natural Wonders with</h1>
-        <h1>Machame Ascent Tours and Travel</h1>
-        <p>
-          At Machame Ascent Tours and Travel, we believe in the transformative power of nature. Tanzania, our beloved home, is a treasure trove of natural beauty. Within its borders, you can find three of Africa’s seven natural wonders. From the awe-inspiring Ngorongoro Crater to the lofty heights of the continent’s tallest peak and the tranquil sandy beaches of Zanzibar to the deep blue of Africa’s lakes, Tanzania offers it all. We invite you to discover these breathtaking wonders, not just as a visitor but as someone who finds themselves in the heart of nature.
-        </p>
-        <button>Book Now</button>
-      </div>
-    </div>
-
-    <div class="home3">
-      <div class="intro-grid">
-        <span>
-          <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
-        </span>
-        <p>Wildlife Safari</p>
-      </div>
-      <div class="intro-grid">
-        <span>
-          <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
-        </span>
-        <p>Wildlife Safari</p>
-      </div>
-      <div class="intro-grid">
-        <span>
-          <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
-        </span>
-        <p>Wildlife Safari</p>
-      </div>
-      <div class="intro-grid">
-        <span>
-          <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
-        </span>
-        <p>Wildlife Safari</p>
-      </div>
-    </div>
-
-    <div class="home4">
-      <div class="home4-desc">
-        <h1>Some of Our Popular Safaris</h1>
-        <p>
-          Your dream trip is within reach, and we’re here to make it happen. Our experienced team knows Tanzania inside and out. We can create the perfect itinerary that aligns with your vision of an unforgettable adventure. Whether it’s the thrill of safari, the relaxation of a beach getaway, or the exploration of diverse landscapes, we’ve got you covered.
-        </p>
-      </div>
-
-      <div class="h4-safari">
-
-        <div class="card-box">
-
-          {{> card
-            title="Hello!"
-            desc="This is my custom component."
-            imageSrc="images/home/spider.jpeg"
-          }}
-
-          {{> card
-            title="Hello!"
-            desc="This is my custom component."
-            imageSrc="images/home/spider.jpeg"
-          }}
-
-          {{> card
-            title="Hello!"
-            desc="This is my custom component."
-            imageSrc="images/home/spider.jpeg"
-          }}
-
-          {{> card
-            title="Hello!"
-            desc="This is my custom component."
-            imageSrc="images/home/spider.jpeg"
-          }}
-
-          {{> card
-            title="Hello!"
-            desc="This is my custom component."
-            imageSrc="images/home/spider.jpeg"
-          }}
-
-          {{> card
-            title="Hello!"
-            desc="This is my custom component."
-            imageSrc="images/home/spider.jpeg"
-          }}
-
-        </div>
-      </div>
-    </div>
-
-    <div class="home5">
-      abc
-    </div>
+  {{#is "home"}}
+    {{> "cover"}}
+    {{#if @custom.show_featured_posts}}
+      {{> "featured-posts"}}
+    {{/if}}
+  {{/is}}
 
 
 
     <div class="site-content">
-      {{{body}}}
+      <!-- {{{body}}} -->
+
+      <div class="home2">
+        <div class="home2-left">
+          <img alt="bala" src="{{asset 'images/home/spider.jpeg'}}" />
+        </div>
+        <div class="home2-right">
+          <h1>Discover Tanzania’s Natural Wonders with</h1>
+          <h1>Machame Ascent Tours and Travel</h1>
+          <p>
+            At Machame Ascent Tours and Travel, we believe in the transformative power of nature. Tanzania, our beloved home, is a treasure trove of natural beauty. Within its borders, you can find three of Africa’s seven natural wonders. From the awe-inspiring Ngorongoro Crater to the lofty heights of the continent’s tallest peak and the tranquil sandy beaches of Zanzibar to the deep blue of Africa’s lakes, Tanzania offers it all. We invite you to discover these breathtaking wonders, not just as a visitor but as someone who finds themselves in the heart of nature.
+          </p>
+          <button>Book Now</button>
+        </div>
+      </div>
+
+      <div class="home3">
+        <div class="intro-grid">
+          <span>
+            <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
+          </span>
+          <p>Wildlife Safari</p>
+        </div>
+        <div class="intro-grid">
+          <span>
+            <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
+          </span>
+          <p>Wildlife Safari</p>
+        </div>
+        <div class="intro-grid">
+          <span>
+            <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
+          </span>
+          <p>Wildlife Safari</p>
+        </div>
+        <div class="intro-grid">
+          <span>
+            <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
+          </span>
+          <p>Wildlife Safari</p>
+        </div>
+      </div>
+
+      <div class="home4">
+        <div class="home4-desc">
+          <h1>Some of Our Popular Safaris</h1>
+          <p>
+            Your dream trip is within reach, and we’re here to make it happen. Our experienced team knows Tanzania inside and out. We can create the perfect itinerary that aligns with your vision of an unforgettable adventure. Whether it’s the thrill of safari, the relaxation of a beach getaway, or the exploration of diverse landscapes, we’ve got you covered.
+          </p>
+        </div>
+
+        <div class="h4-safari">
+
+          <div class="card-box">
+
+            {{> card
+              title="Hello!"
+              desc="This is my custom component."
+              imageSrc="images/home/spider.jpeg"
+            }}
+
+            {{> card
+              title="Hello!"
+              desc="This is my custom component."
+              imageSrc="images/home/spider.jpeg"
+            }}
+
+            {{> card
+              title="Hello!"
+              desc="This is my custom component."
+              imageSrc="images/home/spider.jpeg"
+            }}
+
+            {{> card
+              title="Hello!"
+              desc="This is my custom component."
+              imageSrc="images/home/spider.jpeg"
+            }}
+
+            {{> card
+              title="Hello!"
+              desc="This is my custom component."
+              imageSrc="images/home/spider.jpeg"
+            }}
+
+            {{> card
+              title="Hello!"
+              desc="This is my custom component."
+              imageSrc="images/home/spider.jpeg"
+            }}
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="home5">
+        abc
+      </div>
+
     </div>
 
     <footer class="gh-foot{{#unless @site.secondary_navigation}} no-menu{{/unless}} gh-outer" style="padding: 0;">
