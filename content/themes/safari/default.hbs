@@ -7,8 +7,9 @@
     <title>{{meta_title}}</title>
 
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
-    <link rel="stylesheet" href="{{asset "css/home.css"}}">
     {{ghost_head}}
+    <link rel="stylesheet" href="{{asset "css/home.css"}}">
+
 </head>
 
 <body class="{{body_class}}{{{block "body_class"}}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}{{^is "home"}}{{#if @site.cover_image}} is-head-brand{{/if}}{{/is}}">
@@ -76,6 +77,51 @@
             {{> "featured-posts"}}
         {{/if}}
     {{/is}}
+
+    <div class="home2">
+      <div class="home2-left">
+        <img alt="bala" src="{{asset 'images/home/spider.jpeg'}}" />
+      </div>
+      <div class="home2-right">
+        <h1>Discover Tanzania’s Natural Wonders with</h1>
+        <h1>Machame Ascent Tours and Travel</h1>
+        <p>
+          At Machame Ascent Tours and Travel, we believe in the transformative power of nature. Tanzania, our beloved home, is a treasure trove of natural beauty. Within its borders, you can find three of Africa’s seven natural wonders. From the awe-inspiring Ngorongoro Crater to the lofty heights of the continent’s tallest peak and the tranquil sandy beaches of Zanzibar to the deep blue of Africa’s lakes, Tanzania offers it all. We invite you to discover these breathtaking wonders, not just as a visitor but as someone who finds themselves in the heart of nature.
+        </p>
+        <button>Book Now</button>
+      </div>
+    </div>
+
+    <div class="home3">
+      <div class="intro-grid">
+        <span>
+          <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
+        </span>
+        <p>Wildlife Safari</p>
+      </div>
+      <div class="intro-grid">
+        <span>
+          <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
+        </span>
+        <p>Wildlife Safari</p>
+      </div>
+      <div class="intro-grid">
+        <span>
+          <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
+        </span>
+        <p>Wildlife Safari</p>
+      </div>
+      <div class="intro-grid">
+        <span>
+          <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
+        </span>
+        <p>Wildlife Safari</p>
+      </div>
+    </div>
+
+    <div class="home4">
+    </div>
+
 
     <div class="site-content">
         {{{body}}}
