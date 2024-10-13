@@ -3,6 +3,7 @@ routes:
   /safari/: safari
   /trekking/: trekking
   /daytrips/: daytrips
+  /contact/: contact
 collections:
   /:
     permalink: /{slug}/
