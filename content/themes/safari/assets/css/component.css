@@ -10,6 +10,64 @@
     border-radius: 8px 8px 8px 8px;
     overflow: hidden;
     padding: 8px;
+    text-align: center;
+    .img-box {
+      vertical-align: middle;
+      max-width: 100%;
+      line-height: 1;
+      overflow: hidden;
+
+      img {
+        vertical-align: top;
+        box-shadow: none !important;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+
+    h3 {
+      margin-top: 10px;
+      margin-bottom: 16px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    .btn-box {
+      button {
+        font-weight: 800;
+        width: 148px;
+        height: 38px;
+        color: white;
+        /* border-color: #785510; */
+        border: none;
+        border-radius: 0 0 0 0;
+        background: var(--btn-color);
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+/*************** card component ***************/
+.card-dashed {
+  margin-top: 20px;
+  padding: 0 10px;
+  width: 33.33%;
+  .item-box {
+    border-style: dashed;
+    border-color: #4c4c4c;
+    border-style: dashed;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 8px 8px 8px 8px;
+    overflow: hidden;
+    padding: 8px;
+    text-align: center;
     .img-box {
       display: inline-block;
       vertical-align: middle;
