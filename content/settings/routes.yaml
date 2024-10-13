@@ -2,7 +2,7 @@ routes:
 
   /safari/: safari
   /trekking/: trekking
-
+  /daytrips/: daytrips
 collections:
   /:
     permalink: /{slug}/
