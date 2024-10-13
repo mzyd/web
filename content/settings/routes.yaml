@@ -1,5 +1,8 @@
 routes:
 
+  /safari/: safari
+  /trekking/: trekking
+
 collections:
   /:
     permalink: /{slug}/

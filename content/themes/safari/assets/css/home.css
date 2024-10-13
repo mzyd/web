@@ -6,23 +6,32 @@
   box-sizing: border-box;
 }
 
-button {
-  color: white;
-}
-.top-bar {
-  background-color: #7B995C;
-  height: 30px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 30px;
-
+/* --------- home1 ------------ */
+.btn-box {
+  margin-top: 18px;
   button {
-    background-color: #9CA561;
+    background-color: rgba(0, 0, 0, 0.75);
+    font-family: Roboto;
+    text-transform: uppercase;
+    height: auto;
+    width: auto;
+    color: rgb(255, 255, 255);
     border: none;
+    /* line-height: 3em; */
+    padding: 10px 28px;
+    border-radius: 30px;
   }
   button:hover {
-    background-color: #DBB568;
+    background-color: white;
+    color: black;
+    cursor: pointer;
   }
+}
+
+/* ------------ */
+
+button {
+  color: white;
 }
 
 .home2 {
@@ -228,8 +237,6 @@ button {
 
 .home5 {
   width: 100%;
-  background-image: url('{{asset "images/home/bg.jpg"}}');
-  background-image: url("images/home/s1.jpg");
   background-size: cover;
   height: 600px;
   margin-top: 80px;
@@ -286,4 +293,10 @@ button {
   background: #202326;
   text-align: center;
   color: white;
+}
+
+
+/* safari */
+.safari {
+  border: 1px red solid;
 }

@@ -1,0 +1,46 @@
+  <footer class="gh-foot{{#unless @site.secondary_navigation}} no-menu{{/unless}} gh-outer" style="padding: 0;">
+      <div class="footer-bg">
+        <div class="f-left">
+          <img alt="bala" src="{{asset 'images/default-skin.png'}}" />
+          <p>
+            Machame Ascent Tours Travel is your premier organizer for Kilimanjaro climbs and safaris, not only in Tanzania but also throughout East Africa’s neighboring countries. As a fully registered company,
+          </p>
+        </div>
+        <div class="f-middle">
+          <h3>Our Packages</h3>
+          <ul class='footer-nav'>
+            {{#foreach navigation}}
+              <li class='{{link_class for=(url) class=(concat 'nav-' slug)}}'>
+                <a href='{{url absolute='true'}}'>{{label}}</a></li>
+            {{/foreach}}
+          </ul>
+        </div>
+        <div class="f-right">
+          <h3>Quick Contact</h3>
+          <div class="contact-box">
+            <p>+255 712 919 761</p>
+            <p>info@machameascenttourstravel.com</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="f-bottom">
+        © Copyright 2024 | Tours and Trave design by Tada | All Rights Reserved
+      </div>
+
+      <!-- <div class="gh-foot-inner gh-inner">
+           <div class="gh-copyright">
+           {{@site.title}} © {{date format="YYYY"}}
+           </div>
+           {{#if @site.secondary_navigation}}
+           <nav class="gh-foot-menu">
+           {{navigation type="secondary"}}
+           </nav>
+           {{/if}}
+           <div class="gh-powered-by">
+           <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+           </div>
+           </div> -->
+
+  </footer>

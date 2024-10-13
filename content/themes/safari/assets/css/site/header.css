@@ -28,13 +28,7 @@
 }
 
 .site-header {
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  /* border: 1px red solid; */
-  position: absolute;
-  top: 30px;
-  left: 0;
   z-index: 11;
-
   background-color: #0c0c0cbd;
   background-position: center center;
   background-repeat: no-repeat;
@@ -42,8 +36,7 @@
   border-color: #e2e2e2;
   border-style: solid;
   width: 100%;
-  height: 75px;
-  padding: 0 10%;
+  height: 105px;
 }
 
 .gh-head-brand-wrapper1 {
@@ -55,7 +48,9 @@
 .gh-head-inner1 {
   display: grid;
   grid-template-columns: 1fr 60%;
-  height: 100%;
+  height: 75px;
+  padding: 0 10%;
+  background-color: #0c0c0cbd;
 }
 
 .nav ul {
@@ -78,4 +73,20 @@
 }
 .nav-current a {
   color: #fe7701!important;
+}
+
+
+.top-bar {
+  background-color: #7B995C;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+  button {
+    background-color: #9CA561;
+    border: none;
+  }
+  button:hover {
+    background-color: #DBB568;
+  }
 }
