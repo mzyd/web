@@ -1,32 +1,5 @@
-@import "@tryghost/shared-theme-assets/assets/css/v1/screen.css";
-@import "general/fonts.css";
-@import "general/basics.css";
-@import "general/button.css";
-@import "general/form.css";
-@import "general/icons.css";
-@import "site/layout.css";
-@import "site/header.css";
-@import "site/cover.css";
-@import "blog/feed.css";
-@import "blog/featured.css";
-@import "blog/pagination.css";
-@import "blog/single.css";
-@import "blog/author.css";
-@import "blog/share.css";
-@import "blog/navigation.css";
-@import "blog/related.css";
-@import "blog/taxonomy.css";
-@import "misc/tiny-slider.css";
-@import "misc/utils.css";
-@import "misc/portal.css";
-@import "misc/animations.css";
-@import "blog/card.css";
-
-:root {
-  --btn-color: #7B995C;
-}
-
-.card {
+/* card component */
+.card-solid {
   margin-top: 20px;
   padding: 0 10px;
   width: 33.33%;
@@ -69,6 +42,7 @@
         border: none;
         border-radius: 0 0 0 0;
         background: var(--btn-color);
+        font-size: 0.8em;
       }
     }
   }
