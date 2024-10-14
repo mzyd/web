@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+}
+.intro-page {
+  .sbg-box {
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+    h1 {
+      position: absolute;
+      top: calc(50% - 53px);
+      left: 10%;
+      font-size: 4em;
+      color: white;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .c-wrapper {
+      padding: 40px;
+      max-width: 1150px;
+      .intro-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        .img-box {
+          padding: 30px;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+          }
+        }
+        .intro-txt {
+          padding: 30px;
+          p {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.details {
+  border: 1px solid #e2e2e2;
+}
+.tabs {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.tab {
+  width: 25%;
+  text-align: center;
+  font-weight: 700;
+  padding: 10px 20px;
+  background-color: #ccc;
+  /* border: 1px solid #ccc; */
+  margin-right: 1px;
+  transition: background-color 0.3s;
+}
+.tab:nth-of-type(4) {
+  margin-right: 0;
+}
+.tab.active {
+  background-color: #fff;
+  border-bottom: none;
+  font-weight: bold;
+  position: relative;
+}
+.tab.active:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #F15A29;
+}
+.tab-content {
+  display: none;
+  /* padding: 15px; */
+  padding: 30px 20px;
+
+  background-color: #fff;
+}
+.tab-content.active {
+  display: block;
+}
+
+
+.details form {
+  display: flex;
+  flex-wrap: wrap;
+
+  .input-box {
+    width: 42%;
+    margin-top: 30px;
+    .i-title {
+      span {
+        color: red;
+      }
+    }
+    input {
+      margin: 10px 0;
+    }
+    .i-tips {
+      font-size: 12px;
+      color: #666666;
+    }
+  }
+
+  p {
+    margin: 20px 0;
+  }
+
+  .submit-box {
+    margin: 20px 0;
+    input {
+      background-color: #579AF6;
+      color: white;
+    }
+    input:hover {
+      background-color: #fff;
+      color: black;
+    }
+  }
+
+}
+
+.input-box:nth-child(odd) {
+  margin-right: 20px;
+}

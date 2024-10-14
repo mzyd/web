@@ -245,20 +245,3 @@ button {
   text-align: center;
   color: white;
 }
-
-
-/* safari */
-/* .safari { */
-/*   border: 1px red solid; */
-/*   .c-wraper1 { */
-/*     width: 100%; */
-/*     .card-box { */
-/*       border: 1px blue solid; */
-/*       width: 80%; */
-/*       max-width: 1185.6px; */
-/*       display: flex; */
-/*       flex-wrap: wrap; */
-/*       /\* justify-content: center; *\/ */
-/*     } */
-/*   } */
-/* } */

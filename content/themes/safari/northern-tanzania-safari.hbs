@@ -1,0 +1,138 @@
+{{!< default}}
+
+<head>
+  <link rel="stylesheet" href="{{asset "css/common.css"}}" />
+</head>
+
+<div class="intro-page">
+  <div class="sbg-box">
+    <img alt="bala" src="{{asset 'images/safari/zebra.jpg'}}" />
+    <h1>northern-tanzania-safari</h1>
+  </div>
+
+  <div class="content">
+
+    <div class="c-wrapper">
+
+      <div class="intro-box">
+        <div class="img-box">
+          <img alt="bala" src="{{asset 'images/safari/tree.jpg'}}" />
+        </div>
+        <div class="intro-txt">
+          <h3>ITINERARY OVERVIEW</h3>
+          <p>
+            Our 5 day African safaris, tours, travel packages, which specifically include 2 nights in Serengeti National Park, have been designed to offer you more time in the Serengeti to witness the wildebeest migration. You will experience the excitement of game viewing in some of the most spectacular national wildlife game parks in Africa.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="details">
+        <div class="tabs">
+          <div class="tab active" data-target="tab1">Itinerary</div>
+          <div class="tab" data-target="tab2">Tab 2</div>
+          <div class="tab" data-target="tab3">Tab 3</div>
+          <div class="tab" data-target="tab4">Tab 4</div>
+        </div>
+
+        <div id="tab1" class="tab-content active">
+          <h3>Day 1:Moshi-Tarangire National Park</h3>
+          <p>Non game-viewing travel time: 3-4½ hours</p>
+          <p>Distance: 200 km</p>
+        </div>
+        <div id="tab2" class="tab-content">
+          <h3>内容 2</h3>
+          <p>这是第二个标签的内容。</p>
+        </div>
+        <div id="tab3" class="tab-content">
+          <h3>内容 3</h3>
+          <ul>
+            <li>Personal items e.g. cameras, visa, insurance etc.</li>
+            <li>Personal items e.g. cameras, visa, insurance etc.</li>
+            <li>Personal items e.g. cameras, visa, insurance etc.</li>
+          </ul>
+        </div>
+        <div id="tab4" class="tab-content">
+          <form action="https://formspree.io/f/myzyykad" method="POST" id="book-form">
+
+            <div class="input-box">
+              <p class="i-title">姓名 <span>*</span></p>
+              <input name="" type="text" value="" />
+              <p class="i-tips">全名</p>
+            </div>
+
+            <div class="input-box">
+              <p class="i-title">邮件 <span>*</span></p>
+              <input name="" type="email" value="" />
+              <p class="i-tips">xxx@xx.com</p>
+            </div>
+
+            <div class="input-box">
+              <p class="i-title">人数</p>
+              <input name="" type="number" value="" />
+              <p class="i-tips">大于 12 岁</p>
+            </div>
+
+            <div class="input-box">
+              <p class="i-title">儿童数量</p>
+              <input name="" type="text" value="" />
+              <p class="i-tips">小于 12 岁</p>
+            </div>
+
+            <div class="input-box">
+              <p class="i-title">日期</p>
+              <input name="" type="text" value="" placeholder="date of tour" />
+              <p class="i-tips">Eg 12/02/2021</p>
+            </div>
+
+            <div class="input-box">
+              <p class="i-title">日期</p>
+              <input name="" type="text" value="" placeholder="date of tour" />
+              <p class="i-tips">Eg 12/02/2021</p>
+            </div>
+
+            <p>Do you have other requests or wishes? Tell us about how you imagine your trip of a lifetime to be!
+            </p>
+            <textarea cols="30" id="" name="" rows="3"></textarea>
+
+            <div class="submit-box">
+              <input name="" type="submit" value="提 交"/>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+/* document.addEventListener('DOMContentLoaded', function() {
+ *   const path = location.pathname.replace(/\//g, "")
+ *   if (path === 'home') {
+ *     document.querySelector('.home5').style.backgroundImage = 'url("{{asset "images/home/bg.jpg"}}")';
+ *     document.querySelector('.footer-bg').style.backgroundImage = 'url("{{asset "images/home/footerbg.jpg"}}")';
+ *   }
+ * }); */
+
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', function() {
+    // 移除所有标签的 active 类
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+
+    // 设置当前标签为 active
+    this.classList.add('active');
+    const target = this.getAttribute('data-target');
+    document.getElementById(target).classList.add('active');
+  });
+});
+
+setTimeout(() => {
+  const tabs = document.querySelectorAll('.tab')
+  tabs[3].click()
+}, 500)
+</script>
