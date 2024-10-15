@@ -5,6 +5,7 @@ routes:
   /trekking/: trekking
   /daytrips/: daytrips
   /contact/: contact
+  /about/: about
 
 collections:
   /:
