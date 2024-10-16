@@ -10,15 +10,35 @@
     grid-template-columns: 1fr 1fr;
     margin-top: 40px;
   }
-  .cc img {
+  .cc-img {
     border-radius: 30px;
+    opacity: 0;
+    transform: translateX(-20%);
+    transition: opacity 0.4s ease-out, transform 0.4s ease!important;
   }
-  .cc>.c-txt p {
+
+  .cc-img.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .cc-txt {
+    opacity: 0;
+    transform: translateX(20%);
+    transition: opacity 0.4s ease-out, transform 0.4s ease!important;
+  }
+  .cc-txt.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .cc>.cc-txt p {
     margin-top: 20px;
   }
-  .cc img, .cc>.c-txt {
+  .cc img, .cc>.cc-txt {
     padding: 20px;
   }
+
   </style>
 </head>
 <div class="page-common">
@@ -30,8 +50,8 @@
 
   <div class="about-content">
     <div class="content1 cc">
-      <img alt="bala" src="{{asset 'images/about.jpg'}}" />
-      <div class="c-txt">
+      <img class="cc-img" alt="bala" src="{{asset 'images/about.jpg'}}" />
+      <div class="cc-txt">
         <h3>8888</h3>
         <p>
           At Machame Ascent Tours and Travel, we have a passion for unlocking the extraordinary beauty and adventure that East Africa offers. Based in the heart of Tanzania, we are your dedicated gateway to the wonders of this diverse and captivating region.
@@ -43,7 +63,7 @@
     </div>
 
     <div class="content2 cc">
-      <div class="c-txt">
+      <div class="cc-txt">
         <h3>8888</h3>
         <p>
           At Machame Ascent Tours and Travel, we have a passion for unlocking the extraordinary beauty and adventure that East Africa offers. Based in the heart of Tanzania, we are your dedicated gateway to the wonders of this diverse and captivating region.
@@ -52,13 +72,13 @@
           Choose Machame Ascent Tours and  Travel for the unmatched expertise, personalization, and commitment to responsible tourism. We are your trusted companion on your journey to discover the heart and soul of Tanzania, and we take great pride in being part of the memories that will last a lifetime.
         </p>
       </div>
-      <img alt="bala" src="{{asset 'images/about.jpg'}}" />
+      <img class="cc-img" alt="bala" src="{{asset 'images/about.jpg'}}" />
 
     </div>
 
     <div class="content1 cc">
-      <img alt="bala" src="{{asset 'images/about.jpg'}}" />
-      <div class="c-txt">
+      <img class="cc-img" alt="bala" src="{{asset 'images/about.jpg'}}" />
+      <div class="cc-txt">
         <h3>8888</h3>
         <p>
           At Machame Ascent Tours and Travel, we have a passion for unlocking the extraordinary beauty and adventure that East Africa offers. Based in the heart of Tanzania, we are your dedicated gateway to the wonders of this diverse and captivating region.
@@ -72,3 +92,25 @@
 
   </div>
 </div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.cc-img').forEach(div => {
+    observer.observe(div);
+  });
+  document.querySelectorAll('.cc-txt').forEach(div => {
+    observer.observe(div);
+  });
+})
+</script>
