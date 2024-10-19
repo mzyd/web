@@ -5,7 +5,7 @@ body:not(.with-full-cover) .cover {
 .with-full-cover .cover {
     position: relative;
     display: flex;
-    height: 100vh;
+    height: 70vh;
     overflow: hidden;
 }
 

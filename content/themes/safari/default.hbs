@@ -1,165 +1,162 @@
 <!DOCTYPE html>
 <html lang="{{@site.locale}}">
 
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
 
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
     {{ghost_head}}
-    <link rel="stylesheet" href="{{asset "css/site/header.css"}}">
     <link rel="stylesheet" href="{{asset "css/home.css"}}">
+    <!-- page-common: 通用一级页面的 css -->
     <link rel="stylesheet" href="{{asset "css/page-common.css"}}">
-    <!-- <link rel="stylesheet" href="{{asset "css/safari.css"}}"> -->
-    <!-- <link rel="stylesheet" href="{{asset "css/trekking.css"}}"> -->
-    <!-- <link rel="stylesheet" href="{{asset "css/daytrips.css"}}"> -->
     <link rel="stylesheet" href="{{asset "css/contact.css"}}">
     <link rel="stylesheet" href="{{asset "css/component.css"}}" />
-</head>
+  </head>
 
-<body class="{{body_class}}{{{block "body_class"}}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}{{^is "home"}}{{#if @site.cover_image}} is-head-brand{{/if}}{{/is}}">
-<div class="site" style="position: relative;">
+  <body class="{{body_class}}{{{block "body_class"}}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}{{^is "home"}}{{#if @site.cover_image}} is-head-brand{{/if}}{{/is}}">
+    <div class="site" style="position: relative;">
 
-  {{> header}}
+      {{> header}}
 
-  {{#is "home"}}
-    {{> "cover"}}
-    {{#if @custom.show_featured_posts}}
-      {{> "featured-posts"}}
-    {{/if}}
+      {{#is "home"}}
+        {{> "cover"}}
+        {{#if @custom.show_featured_posts}}
+          {{> "featured-posts"}}
+        {{/if}}
 
-    <div class="site-content">
+        <div class="site-content">
 
-      <div class="home2">
-        <div class="home2-left">
-          <img alt="bala" src="{{asset 'images/home/spider.jpeg'}}" />
-        </div>
-        <div class="home2-right">
-          <h1>Discover Tanzania’s Natural Wonders with</h1>
-          <h1>Machame Ascent Tours and Travel</h1>
-          <p>
-            At Machame Ascent Tours and Travel, we believe in the transformative power of nature. Tanzania, our beloved home, is a treasure trove of natural beauty. Within its borders, you can find three of Africa’s seven natural wonders. From the awe-inspiring Ngorongoro Crater to the lofty heights of the continent’s tallest peak and the tranquil sandy beaches of Zanzibar to the deep blue of Africa’s lakes, Tanzania offers it all. We invite you to discover these breathtaking wonders, not just as a visitor but as someone who finds themselves in the heart of nature.
-          </p>
-          <button>Book Now</button>
-        </div>
-      </div>
+          <div class="home2">
+            <div class="home2-left">
+              <img alt="bala" src="{{asset 'images/home/spider.jpeg'}}" />
+            </div>
+            <div class="home2-right">
+              <h1>Discover Tanzania’s Natural Wonders with</h1>
+              <h1>Machame Ascent Tours and Travel</h1>
+              <p>
+                At Machame Ascent Tours and Travel, we believe in the transformative power of nature. Tanzania, our beloved home, is a treasure trove of natural beauty. Within its borders, you can find three of Africa’s seven natural wonders. From the awe-inspiring Ngorongoro Crater to the lofty heights of the continent’s tallest peak and the tranquil sandy beaches of Zanzibar to the deep blue of Africa’s lakes, Tanzania offers it all. We invite you to discover these breathtaking wonders, not just as a visitor but as someone who finds themselves in the heart of nature.
+              </p>
+              <button>Book Now</button>
+            </div>
+          </div>
 
-      <div class="home3">
-        <div class="intro-grid">
-          <span>
-            <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
-          </span>
-          <p>Wildlife Safari</p>
-        </div>
-        <div class="intro-grid">
-          <span>
-            <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
-          </span>
-          <p>Wildlife Safari</p>
-        </div>
-        <div class="intro-grid">
-          <span>
-            <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
-          </span>
-          <p>Wildlife Safari</p>
-        </div>
-        <div class="intro-grid">
-          <span>
-            <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
-          </span>
-          <p>Wildlife Safari</p>
-        </div>
-      </div>
+          <div class="home3">
+            <div class="intro-grid">
+              <span>
+                <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
+              </span>
+              <p>Wildlife Safari</p>
+            </div>
+            <div class="intro-grid">
+              <span>
+                <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
+              </span>
+              <p>Wildlife Safari</p>
+            </div>
+            <div class="intro-grid">
+              <span>
+                <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
+              </span>
+              <p>Wildlife Safari</p>
+            </div>
+            <div class="intro-grid">
+              <span>
+                <img alt="bala" src="{{asset 'images/home/s1.jpeg'}}" />
+              </span>
+              <p>Wildlife Safari</p>
+            </div>
+          </div>
 
-      <div class="home4">
-        <div class="home4-desc">
-          <h1>Some of Our Popular Safaris</h1>
-          <p>
-            Your dream trip is within reach, and we’re here to make it happen. Our experienced team knows Tanzania inside and out. We can create the perfect itinerary that aligns with your vision of an unforgettable adventure. Whether it’s the thrill of safari, the relaxation of a beach getaway, or the exploration of diverse landscapes, we’ve got you covered.
-          </p>
-        </div>
+          <div class="home4">
+            <div class="home4-desc">
+              <h1>Some of Our Popular Safaris</h1>
+              <p>
+                Your dream trip is within reach, and we’re here to make it happen. Our experienced team knows Tanzania inside and out. We can create the perfect itinerary that aligns with your vision of an unforgettable adventure. Whether it’s the thrill of safari, the relaxation of a beach getaway, or the exploration of diverse landscapes, we’ve got you covered.
+              </p>
+            </div>
 
-        <div class="h4-safari">
+            <div class="h4-safari">
 
-          <div class="card-box">
+              <div class="card-box">
 
-            {{> card
-              title="Hello!"
-              desc="This is my custom component."
-              imageSrc="images/home/spider.jpeg"
-            }}
+                {{> card
+                  title="Hello!"
+                  desc="This is my custom component."
+                  imageSrc="images/home/spider.jpeg"
+                }}
 
-            {{> card
-              title="Hello!"
-              desc="This is my custom component."
-              imageSrc="images/home/spider.jpeg"
-            }}
+                {{> card
+                  title="Hello!"
+                  desc="This is my custom component."
+                  imageSrc="images/home/spider.jpeg"
+                }}
 
-            {{> card
-              title="Hello!"
-              desc="This is my custom component."
-              imageSrc="images/home/spider.jpeg"
-            }}
+                {{> card
+                  title="Hello!"
+                  desc="This is my custom component."
+                  imageSrc="images/home/spider.jpeg"
+                }}
 
-            {{> card
-              title="Hello!"
-              desc="This is my custom component."
-              imageSrc="images/home/spider.jpeg"
-            }}
+                {{> card
+                  title="Hello!"
+                  desc="This is my custom component."
+                  imageSrc="images/home/spider.jpeg"
+                }}
 
-            {{> card
-              title="Hello!"
-              desc="This is my custom component."
-              imageSrc="images/home/spider.jpeg"
-            }}
+                {{> card
+                  title="Hello!"
+                  desc="This is my custom component."
+                  imageSrc="images/home/spider.jpeg"
+                }}
 
-            {{> card
-              title="Hello!"
-              desc="This is my custom component."
-              imageSrc="images/home/spider.jpeg"
-            }}
+                {{> card
+                  title="Hello!"
+                  desc="This is my custom component."
+                  imageSrc="images/home/spider.jpeg"
+                }}
 
+              </div>
+            </div>
+          </div>
+
+          <div class="home5">
+            abc
           </div>
         </div>
-      </div>
 
-      <div class="home5">
-        abc
-      </div>
+
+      {{/is}}
+
+      {{{body}}}
+
+      {{> footer}}
+
     </div>
 
+    {{#is "post, page"}}
+      {{> "pswp"}}
+    {{/is}}
 
-  {{/is}}
-
-  {{{body}}}
-
-  {{> footer}}
-
-</div>
-
-{{#is "post, page"}}
-    {{> "pswp"}}
-{{/is}}
-
-{{!-- Fixes 100vh issue on mobile browsers with toolbar on the bottom --}}
-<script>
+    {{!-- Fixes 100vh issue on mobile browsers with toolbar on the bottom --}}
+    <script>
     if (document.body.classList.contains('with-full-cover') && (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform))) {
-        document.getElementsByClassName('cover')[0].style.height = window.innerHeight + 'px';
+      document.getElementsByClassName('cover')[0].style.height = window.innerHeight + 'px';
     }
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const path = location.pathname.replace(/\//g, "")
-    if (path === 'home') {
-      document.querySelector('.home5').style.backgroundImage = 'url("{{asset "images/home/bg.jpg"}}")';
-      document.querySelector('.footer-bg').style.backgroundImage = 'url("{{asset "images/home/footerbg.jpg"}}")';
-    }
-  });
-</script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const path = location.pathname.replace(/\//g, "")
+      if (path === 'home') {
+        document.querySelector('.home5').style.backgroundImage = 'url("{{asset "images/home/bg.jpg"}}")';
+        document.querySelector('.footer-bg').style.backgroundImage = 'url("{{asset "images/home/footerbg.jpg"}}")';
+      }
+    });
+    </script>
 
-<script src="{{asset "built/main.min.js"}}"></script>
+    <script src="{{asset "built/main.min.js"}}"></script>
 
-{{ghost_foot}}
+    {{ghost_foot}}
 
-</body>
+  </body>
 </html>

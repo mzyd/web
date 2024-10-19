@@ -46,21 +46,28 @@
 }
 
 .gh-head-inner1 {
+  height: 75px;
+  background-color: #0c0c0cbd;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-wrapper {
+  height: 75px;
   display: grid;
   grid-template-columns: 1fr 60%;
-  height: 75px;
-  padding: 0 10%;
-  background-color: #0c0c0cbd;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .nav ul {
   list-style: none;
   display: flex;
+  justify-content: space-between;
   height: 100%;
   margin: 0;
   align-items: center;
   li {
-    margin-left: 20px;
     font-size: 16px;
     font-weight: 600;
   }
@@ -76,13 +83,23 @@
 }
 
 
+.top-box {
+  width: 100%;
+  background-color: #7B995C;
+  display: flex;
+  justify-content: center;
+}
+
 .top-bar {
+  width: 100%;
+  max-width: 1200px;
   background-color: #7B995C;
   height: 30px;
   display: flex;
   justify-content: space-between;
-  padding: 0 10%;
+
   button {
+    display: inline-block;
     background-color: #9CA561;
     border: none;
   }
