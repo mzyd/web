@@ -5,8 +5,9 @@ body:not(.with-full-cover) .cover {
 .with-full-cover .cover {
     position: relative;
     display: flex;
-    height: 70vh;
+    height: 60vh;
     overflow: hidden;
+    position: relative;
 }
 
 .with-full-cover .cover.half {
@@ -26,12 +27,50 @@ body:not(.with-full-cover) .cover {
     transition: opacity 1.5s ease;
 }
 
+.cover .home-img-btn-left {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  width: 60px;
+}
+
+.cover .home-img-btn-left svg {
+  opacity: 0;
+  transition: opacity 1s ease!important;
+  cursor: pointer;
+}
+
+.cover .home-img-btn-right {
+  position: absolute;
+  right: var(--gap);
+  height: 100%;
+  z-index: 10;
+  width: 60px;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.cover .home-img-btn-right svg {
+  opacity: 0;
+  transition: opacity 1s ease!important;
+  cursor: pointer;
+}
+
+.cover .home-img-btn-left:hover svg {
+  opacity: 1;
+}
+.cover .home-img-btn-right:hover svg {
+  opacity: 1;
+}
+
 .cover.image-loading::before {
     opacity: 1;
 }
 
 .cover-image {
-    transition: transform 2s ease;
+  transition: transform 2s ease;
+  transition: opacity 1s ease!important;
 }
 
 .cover.image-loading .cover-image {

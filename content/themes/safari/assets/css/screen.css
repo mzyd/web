@@ -21,3 +21,11 @@
 @import "misc/portal.css";
 @import "misc/animations.css";
 @import "blog/card.css";
+
+
+.no-select {
+    user-select: none; /* 对支持的浏览器 */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}

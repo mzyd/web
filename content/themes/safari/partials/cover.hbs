@@ -1,16 +1,24 @@
-<div class="cover{{#if @site.cover_image}} image-loading{{/if}}{{#match @custom.publication_cover_style "Half screen"}} half{{/match}} gh-outer">
+<div class="cover{{#if @site.cover_image}} image-loading{{/if}}{{#match @custom.publication_cover_style "Half screen"}} half{{/match}} gh-outer no-select">
   {{#if @site.cover_image}}
-    <!-- <?xml version="1.0" encoding="UTF-8"?>
-         <svg width="54px" height="54px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000" style="z-index:1;">
-         <path d="M15 6L9 12L15 18" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-         </svg> -->
+    <span class="home-img-btn-left">
+      <?xml version="1.0" encoding="UTF-8"?>
+      <svg class="svg-btn" width="54px" height="54px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000" style="z-index:1;">
+        <path d="M15 6L9 12L15 18" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </span>
+
+    <span class="home-img-btn-right">
+      <?xml version="1.0" encoding="UTF-8"?>
+      <svg class="svg-btn" width="54px" height="54px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000" style="z-index: 1;"><path d="M9 6L15 12L9 18" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </span>
+
     <!-- <img class="cover-image u-object-fit" src="{{@site.cover_image}}" alt="{{@site.title}}"> -->
-    <img class="cover-image u-object-fit" src="{{asset 'images/slide-4.jpg'}}" alt="" />
+    <img class="cover-image u-object-fit" src="{{asset 'images/slide/slide-1.jpg'}}" alt="" />
   {{/if}}
 
-    <div class="cover-content">
+  <div class="cover-content">
         {{#if @site.description}}
-            <div class="cover-description">
+          <div class="cover-description">
                 {{#unless @member}}
                     {{#if @custom.email_signup_text}}
                         {{@custom.email_signup_text}}
@@ -43,7 +51,58 @@
              {{/if}} -->
     </div>
 
-    <button class="button-icon cover-arrow">
-        {{> "icons/caret-down"}}
-    </button>
+    <!-- <button class="button-icon cover-arrow">
+         {{> "icons/caret-down"}}
+         </button> -->
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const imageCount = 2
+  const img = document.querySelector('.cover-image')
+  const parent = img.parentNode
+  console.log("img--", img.parentNode)
+
+  const btns = document.querySelectorAll('.svg-btn')
+  const btnLeft = btns[0]
+  const btnRight = btns[1]
+  console.log("bbbbb", btnLeft, btnRight)
+
+  btnLeft.addEventListener('click', function () {
+
+    const str = img.src
+    const matches = str.match(/-?\d+/g); // 匹配所有数字，包含负号
+    const target = matches.find(num => num.startsWith('-'));
+    const numStr = Number(target[1])
+    const newNum = '-' + ((numStr - 1) == 0 ? imageCount : (numStr - 1))
+
+    const newSrc = img.src.replace(/-?\d+/g, match => {
+      return match.startsWith('-') ? newNum : match;
+    });
+    img.style.opacity = '0'
+    const t = setTimeout(function () {
+      img.setAttribute('src', newSrc)
+      img.style.opacity = '1'
+      clearTimeout(t)
+    }, 300)
+  })
+
+  btnRight.addEventListener('click', function () {
+    const str = img.src
+    const matches = str.match(/-?\d+/g); // 匹配所有数字，包含负号
+    const target = matches.find(num => num.startsWith('-'));
+    const numStr = Number(target[1])
+    const newNum = '-' + (numStr == imageCount ? '1' : numStr + 1)
+
+    const newSrc = img.src.replace(/-?\d+/g, match => {
+      return match.startsWith('-') ? newNum : match;
+    });
+    img.style.opacity = '0'
+    const t = setTimeout(function () {
+      img.setAttribute('src', newSrc)
+      img.style.opacity = '1'
+      clearTimeout(t)
+    }, 300)
+  })
+
+})
+</script>
