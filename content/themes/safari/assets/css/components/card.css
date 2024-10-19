@@ -3,7 +3,7 @@
   margin-top: 20px;
   padding: 0 10px;
   width: 33.33%;
-  .item-box {
+  .card-item-box {
     border-width: 1px 1px 4px 1px;
     border-color: #7b995c;
     border-style: solid;
@@ -33,7 +33,7 @@
     p {
       margin-bottom: 20px;
     }
-    .btn-box {
+    .card-btn-box {
       button {
         font-weight: 800;
         width: 148px;
@@ -44,6 +44,9 @@
         border-radius: 0 0 0 0;
         background: var(--btn-color);
         font-size: 0.8em;
+      }
+      button:hover {
+        background-color: #e56f1b!important;
       }
     }
   }
@@ -59,7 +62,7 @@
   margin-top: 20px;
   padding: 0 10px;
   width: 33.33%;
-  .item-box {
+  .card-item-box {
     border-style: dashed;
     border-color: #4c4c4c;
     border-style: dashed;
@@ -90,17 +93,19 @@
     p {
       margin-bottom: 20px;
     }
-    .btn-box {
+    .card-btn-box {
       button {
         font-weight: 800;
         width: 148px;
         height: 38px;
         color: white;
-        /* border-color: #785510; */
         border: none;
         border-radius: 0 0 0 0;
         background: var(--btn-color);
         font-size: 0.8em;
+      }
+      button:hover {
+        background-color: #e56f1b!important;
       }
     }
   }

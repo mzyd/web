@@ -41,10 +41,10 @@ function cover() {
         cover.classList.remove('image-loading');
     });
 
-    document.querySelector('.cover-arrow').addEventListener('click', function () {
-        var element = cover.nextElementSibling;
-        element.scrollIntoView({behavior: 'smooth', block: 'start'});
-    });
+    // document.querySelector('.cover-arrow').addEventListener('click', function () {
+    //     var element = cover.nextElementSibling;
+    //     element.scrollIntoView({behavior: 'smooth', block: 'start'});
+    // });
 }
 
 function featured() {

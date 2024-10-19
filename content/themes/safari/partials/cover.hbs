@@ -60,15 +60,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const imageCount = 2
   const img = document.querySelector('.cover-image')
   const parent = img.parentNode
-  console.log("img--", img.parentNode)
 
   const btns = document.querySelectorAll('.svg-btn')
   const btnLeft = btns[0]
   const btnRight = btns[1]
-  console.log("bbbbb", btnLeft, btnRight)
 
   btnLeft.addEventListener('click', function () {
-
     const str = img.src
     const matches = str.match(/-?\d+/g); // 匹配所有数字，包含负号
     const target = matches.find(num => num.startsWith('-'));

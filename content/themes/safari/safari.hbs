@@ -63,5 +63,23 @@ document.addEventListener('DOMContentLoaded', function() {
       location.href = location.href + title
     });
   })
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  const classNameList = ['.card-solid', '.card-dashed']
+  classNameList.forEach(name => {
+    document.querySelectorAll(name).forEach(div => {
+      observer.observe(div);
+    });
+  })
+
 });
 </script>

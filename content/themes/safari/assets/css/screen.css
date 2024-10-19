@@ -20,7 +20,7 @@
 @import "misc/utils.css";
 @import "misc/portal.css";
 @import "misc/animations.css";
-@import "blog/card.css";
+@import "components/card.css";
 
 
 .no-select {
@@ -28,4 +28,8 @@
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+button:hover {
+  cursor: pointer;
 }
