@@ -151,6 +151,23 @@
         document.querySelector('.home5').style.backgroundImage = 'url("{{asset "images/home/bg.jpg"}}")';
         document.querySelector('.footer-bg').style.backgroundImage = 'url("{{asset "images/home/footerbg.jpg"}}")';
       }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      const classNameList = ['.home2-left', '.home2-right', '.card-solid']
+      classNameList.forEach(name => {
+        document.querySelectorAll(name).forEach(div => {
+          observer.observe(div);
+        });
+      })
     });
     </script>
 
